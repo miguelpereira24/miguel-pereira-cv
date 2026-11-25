@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}img{max-width:100%}</style>
+<meta property="og:title" content="Miguel Pereira Trinidad · CV">
+<meta property="og:description" content="Técnico en Administración de Sistemas y Redes. Cisco CCST Networking e IT Support, Pearson IT Specialist.">
+<meta property="og:image" content="https://pereiratrinidadm-spec.github.io/miguel-pereira-cv/foto.png">
+<link rel="icon" href="qr.svg">
+<title>Miguel Pereira Trinidad</title>
+<meta name="description" content="CV de Miguel Pereira Trinidad, estudiante de ASIR en U-tad con certificaciones Cisco CCST Networking, CCST IT Support y Pearson IT Specialist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap">
+<style>
+/* Layout: barra fija + hero oscuro con topología de red animada, banda de cifras, "por qué yo",
+   perfil junto a un archivo de configuración, trayectoria, credenciales verificables y cierre con contacto + QR */
+:root{
+  --bg:#f2f5f9;
+  --surface:#ffffff;
+  --surface-2:#e9eef5;
+  --fg:#152031;
+  --muted:#5b677b;
+  --line:#d9e0ea;
+  --ink:#0f1724;          /* fondo del hero y del cierre */
+  --ink-2:#17233a;
+  --ink-fg:#eef3fa;
+  --ink-muted:#9aa8bd;
+  --accent:#0b7895;
+  --accent-2:#4cc0dd;     /* acento luminoso sobre fondo oscuro */
+  --accent-soft:#dff1f6;
+  --ok:#1f8a5b;
+  --font-display:"Sora",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1119;--surface:#131b27;--surface-2:#1a2433;--fg:#e4eaf2;--muted:#95a2b6;--line:#243043;
+    --ink:#070b12;--ink-2:#0f1826;--ink-fg:#eef3fa;--ink-muted:#8d9bb0;
+    --accent:#4cc0dd;--accent-2:#4cc0dd;--accent-soft:#10303b;--ok:#4fc58c;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1119;--surface:#131b27;--surface-2:#1a2433;--fg:#e4eaf2;--muted:#95a2b6;--line:#243043;
+  --ink:#070b12;--ink-2:#0f1826;--ink-fg:#eef3fa;--ink-muted:#8d9bb0;
+  --accent:#4cc0dd;--accent-2:#4cc0dd;--accent-soft:#10303b;--ok:#4fc58c;color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--ink)}
+a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.mono{font-family:var(--font-mono)}
+.eyebrow{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-top:8px}
+.sec{padding-block:clamp(56px,9vw,104px)}
+.sec-head{display:flex;flex-direction:column;gap:4px;margin-bottom:clamp(28px,4vw,44px);max-width:640px}
+.sec-head p{color:var(--muted);margin-top:10px;font-size:1.05rem}
+
+/* ---------- Barra superior ---------- */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink-fg);text-decoration:none;font-family:var(--font-display);font-weight:700;font-size:.98rem;white-space:nowrap}
+.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--ink-2);border:1px solid rgba(255,255,255,.12);font-size:.82rem;font-weight:800;color:#fff;position:relative}
+.mark::after{content:"";position:absolute;left:8px;right:8px;bottom:6px;height:2px;border-radius:2px;background:var(--accent-2)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{color:var(--ink-muted);text-decoration:none;font-size:.9rem;padding:6px 10px;border-radius:8px}
+.nav ul a:hover{color:var(--ink-fg);background:rgba(255,255,255,.06)}
+.nav-actions{display:flex;gap:8px;margin-left:8px}
+.icon-btn{padding-inline:11px}
+
+/* ---------- Ventana del QR ---------- */
+.modal{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(5,9,15,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.modal-card{position:relative;width:min(100%,380px);background:#ffffff;color:#152031;border-radius:26px;padding:26px 24px 22px;text-align:center;box-shadow:0 40px 100px -30px rgba(0,0,0,.9);animation:pop .25s ease}
+@keyframes pop{from{transform:scale(.94);opacity:0}}
+.modal-card img{display:block;width:100%;max-width:100%;aspect-ratio:1;height:auto}
+.modal-card h3{font-family:var(--font-display);font-size:1.25rem;margin-top:6px}
+.modal-card p{font-size:.92rem;color:#5b677b;margin-top:4px}
+.modal-card .row{display:flex;gap:10px;margin-top:18px}
+.modal-card .row .btn{flex:1 1 0}
+.modal-dark{background:#0f1724;color:#eef3fa}
+.modal-light{background:#e9eef5;color:#152031}
+.close{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;border:0;background:#e9eef5;color:#152031;display:grid;place-items:center;cursor:pointer}
+.close svg{width:18px;height:18px}
+
+/* ---------- Botones ---------- */
+.btn{font:inherit;font-weight:600;font-size:.95rem;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:11px;border:1px solid transparent;cursor:pointer;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-glow{background:var(--accent-2);color:#04141b;box-shadow:0 8px 28px -8px rgba(76,192,221,.65)}
+.btn-glow:hover{box-shadow:0 12px 34px -8px rgba(76,192,221,.85)}
+.btn-line{background:rgba(255,255,255,.04);color:var(--ink-fg);border-color:rgba(255,255,255,.2)}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.btn-sm{padding:7px 13px;font-size:.86rem;border-radius:9px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:radial-gradient(1200px 500px at 85% 0%,#123049 0%,transparent 60%),var(--ink);color:var(--ink-fg);overflow:hidden;isolation:isolate}
+#net{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.85}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(transparent,var(--ink));z-index:-1;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(48px,8vw,96px) clamp(56px,8vw,104px)}
+.term-line{font-family:var(--font-mono);font-size:.9rem;color:var(--ink-muted);display:flex;flex-wrap:wrap;gap:0 8px;margin-bottom:18px}
+.term-line b{color:var(--accent-2);font-weight:500}
+.cursor{display:inline-block;width:.6em;height:1.05em;background:var(--accent-2);vertical-align:-3px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero h1{font-size:clamp(2.6rem,7.4vw,5.4rem);line-height:.98;font-weight:800;letter-spacing:-.035em}
+.hero h1 .l2{display:block;background:linear-gradient(90deg,#ffffff 0%,var(--accent-2) 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{margin-top:22px;font-size:clamp(1.05rem,2.2vw,1.35rem);font-weight:500;color:var(--ink-fg);display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .4em}
+.role .rot{font-family:var(--font-mono);color:var(--accent-2);font-weight:600;display:inline-block;min-width:11ch}
+.role .rot::after{content:"_";animation:blink 1.1s steps(1) infinite}
+.hero .intro{margin-top:16px;color:var(--ink-muted);max-width:52ch;font-size:1.04rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* Retrato: foto circular con anillo de gradiente y órbita de habilidades */
+.portrait{--size:min(280px,52vw);--pad:92px;position:relative;justify-self:center;margin:0;width:calc(var(--size) + 80px);max-width:100%;display:flex;flex-direction:column;align-items:center;gap:var(--pad);padding-top:var(--pad)}
+.ring{position:relative;z-index:1;width:var(--size);height:var(--size);flex:none;border-radius:50%;box-shadow:0 0 0 10px rgba(76,192,221,.07),0 30px 80px -20px rgba(76,192,221,.45)}
+.ring::before{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--accent-2),#1e5a8a,#7be0f5,#0b7895,var(--accent-2));animation:spin 8s linear infinite}
+.ring img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);max-width:none;border-radius:50%;object-fit:cover;object-position:50% 22%;border:5px solid var(--ink);background:#e7e4df}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orbit{position:absolute;left:50%;top:calc(var(--pad) + var(--size) / 2);width:calc(var(--size) + 64px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:1px dashed rgba(154,168,189,.35);animation:orbit 30s linear infinite;pointer-events:none;z-index:2}
+@keyframes orbit{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.sat{position:absolute;width:0;height:0}
+.sat b{position:absolute;transform:translate(-50%,-50%);display:block;font-family:var(--font-mono);font-size:.74rem;font-weight:600;color:#04141b;background:var(--accent-2);padding:5px 10px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 20px -8px rgba(0,0,0,.6);animation:upright 30s linear infinite}
+@keyframes upright{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(-360deg)}}
+@keyframes upright-r{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.s1{left:50%;top:0}
+.s2{left:85.36%;top:14.64%}
+.s3{left:100%;top:50%}
+.s4{left:85.36%;top:85.36%}
+.s5{left:50%;top:100%}
+.s6{left:14.64%;top:85.36%}
+.s7{left:0;top:50%}
+.s8{left:14.64%;top:14.64%}
+.sat b.w{background:#ffffff}
+.sat b.y{background:#ffc978}
+.sat b.ghost{background:rgba(15,23,36,.85);color:var(--accent-2);border:1px solid rgba(76,192,221,.45);font-size:.68rem;padding:3px 8px;animation-name:upright-r;animation-duration:22s}
+.orbit-in{width:calc(var(--size) + 150px);border-color:rgba(154,168,189,.16);animation-duration:22s;animation-direction:reverse;z-index:0}
+.avail{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:.95rem;color:var(--ink-fg);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:8px 16px;border-radius:999px}
+.avail i{width:9px;height:9px;border-radius:50%;background:#5be3a0;box-shadow:0 0 0 0 rgba(91,227,160,.6);animation:beacon 2s ease-out infinite}
+@keyframes beacon{70%{box-shadow:0 0 0 10px rgba(91,227,160,0)}100%{box-shadow:0 0 0 0 rgba(91,227,160,0)}}
+
+/* (estilos anteriores de la tarjeta, ya sin uso) */
+.device{position:relative;justify-self:center;width:min(100%,360px)}
+.device-card{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:18px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 30px 80px -30px rgba(0,0,0,.7)}
+.device-top{display:flex;align-items:center;gap:6px;margin-bottom:14px}
+.device-top i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.18)}
+.device-top i:first-child{background:#ff6b5f}.device-top i:nth-child(2){background:#ffbd2e}.device-top i:nth-child(3){background:#28c840}
+.device-top span{margin-left:auto;font-family:var(--font-mono);font-size:.72rem;color:var(--ink-muted)}
+.photo-wrap{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/4.3;max-width:100%;background:#dfe3e8}
+.photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.photo-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 60%,rgba(7,11,18,.55))}
+.ping{position:absolute;left:12px;right:12px;bottom:12px;z-index:1;font-family:var(--font-mono);font-size:.76rem;line-height:1.45;color:#e8f6fb;background:rgba(7,11,18,.72);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:8px 10px}
+.ping b{color:var(--accent-2);font-weight:500}
+.ping .ok{color:#5be3a0}
+.float{position:absolute;z-index:2;display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 12px;box-shadow:0 14px 30px -14px rgba(0,0,0,.55);animation:bob 6s ease-in-out infinite}
+.float small{display:block;font-weight:400;color:var(--muted);font-size:.72rem;line-height:1.2}
+.float .dot{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-family:var(--font-mono);font-size:.72rem;font-weight:600}
+.f1{top:44px;left:-28px}
+.f2{bottom:86px;right:-26px;animation-delay:-3s}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* ---------- Banda de cifras ---------- */
+.stats{background:var(--surface);border-bottom:1px solid var(--line);position:relative}
+.stats ul{list-style:none;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-block:0}
+.stats li{padding:26px 20px;border-left:1px solid var(--line);min-width:0}
+.stats li:first-child{border-left:0;padding-left:0}
+.stats strong{display:block;font-family:var(--font-display);font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--fg);font-variant-numeric:tabular-nums}
+.stats strong em{font-style:normal;color:var(--accent)}
+.stats span{display:block;margin-top:8px;color:var(--muted);font-size:.92rem;line-height:1.35}
+
+/* ---------- Por qué yo ---------- */
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.why article{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:12px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;min-width:0}
+.why article:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));box-shadow:0 22px 40px -28px rgba(11,120,149,.55)}
+.why .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent)}
+.why .ico svg{width:24px;height:24px}
+.why h3{font-size:1.18rem;font-weight:700}
+.why p{color:var(--muted)}
+.why .proof{margin-top:auto;padding-top:6px;font-family:var(--font-mono);font-size:.78rem;color:var(--accent)}
+
+/* ---------- Perfil + config ---------- */
+.profile{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,60px);align-items:start}
+.profile .text p{font-size:1.08rem;max-width:60ch}
+.profile .text p + p{margin-top:16px}
+.profile .text strong{color:var(--fg)}
+.quote{margin-top:26px;padding:18px 20px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 12px 12px 0;font-family:var(--font-display);font-size:1.12rem;font-weight:600;line-height:1.4}
+.code{background:var(--ink);color:#cfdbe9;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 30px 60px -36px rgba(7,11,18,.8);min-width:0}
+.code-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;background:var(--ink-2);border-bottom:1px solid rgba(255,255,255,.06)}
+.code-bar i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.18)}
+.code-bar span{margin-left:10px;font-family:var(--font-mono);font-size:.78rem;color:#8d9bb0}
+.code pre{margin:0;padding:18px 18px 22px;font-family:var(--font-mono);font-size:.86rem;line-height:1.75;overflow-x:auto}
+.code .k{color:#7fd6ec}.code .s{color:#a9e8b9}.code .c{color:#6d7d93}.code .n{color:#ffc978}
+
+/* ---------- Experiencia ---------- */
+.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px;position:relative}
+.timeline::before{content:"";position:absolute;left:23px;top:30px;bottom:30px;width:2px;background:linear-gradient(var(--accent),var(--line))}
+.job{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);gap:20px}
+.job .node{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--surface);border:2px solid var(--line);color:var(--muted);z-index:1}
+.job .node svg{width:22px;height:22px}
+.job.now .node{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 0 6px var(--accent-soft)}
+.job-body{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 24px;min-width:0}
+.job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:center}
+.job h3{font-size:1.2rem;font-weight:700}
+.where{color:var(--muted);margin-top:4px}
+.where strong{color:var(--fg)}
+.pill{font-family:var(--font-mono);font-size:.74rem;font-weight:500;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pill.live{background:var(--accent-soft);color:var(--accent);display:inline-flex;align-items:center;gap:6px}
+.pill.live::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+.periods{display:flex;flex-wrap:wrap;gap:6px}
+.job ul{margin:14px 0 0;padding-left:18px}
+.job li{margin:4px 0}
+.gives{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);align-items:center}
+.gives span{font-size:.8rem;padding:3px 10px;border-radius:7px;background:var(--surface-2);color:var(--fg)}
+.gives b{font-family:var(--font-mono);font-size:.74rem;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-right:4px}
+
+/* ---------- Certificaciones ---------- */
+.certs-band{background:var(--ink);color:var(--ink-fg);position:relative;overflow:hidden}
+.certs-band::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000,transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.certs-band .wrap{position:relative}
+.certs-band .eyebrow{color:var(--accent-2)}
+.certs-band .sec-head p{color:var(--ink-muted)}
+.certs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cert{position:relative;background:linear-gradient(165deg,var(--ink-2),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:transform .2s ease,border-color .2s ease}
+.cert:hover{transform:translateY(-4px);border-color:rgba(76,192,221,.5)}
+.badge{width:64px;height:72px;display:grid;place-items:center;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:linear-gradient(150deg,var(--accent-2),#0b5d78);color:#fff;font-family:var(--font-display);font-weight:800;font-size:.86rem;letter-spacing:.02em}
+.badge.pearson{background:linear-gradient(150deg,#ffbd6b,#c2621c)}
+.cert .issuer{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+.cert h3{font-size:1.2rem;font-weight:700;line-height:1.25}
+.cert p{color:var(--ink-muted);font-size:.92rem}
+.cert .meta{display:flex;flex-wrap:wrap;gap:6px}
+.cert .meta span{font-family:var(--font-mono);font-size:.72rem;padding:3px 8px;border-radius:6px;background:rgba(255,255,255,.07);color:var(--ink-fg)}
+.cert a{margin-top:auto;color:var(--accent-2);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.cert a:hover{text-decoration:underline}
+
+/* ---------- Formación ---------- */
+.edu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.edu article{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.edu .yr{font-family:var(--font-mono);font-size:.8rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.edu h3{font-size:1.12rem;font-weight:700;line-height:1.3}
+.edu p{color:var(--muted);font-size:.94rem}
+.progress{margin-top:auto;padding-top:10px}
+.progress .bar{height:8px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.progress .bar i{display:block;height:100%;width:50%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.progress small{display:flex;justify-content:space-between;margin-top:6px;font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
+.edu article.main{grid-column:span 1;border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+
+/* ---------- Competencias ---------- */
+.skills{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;min-width:0}
+.panel h3{font-size:1.05rem;font-weight:700;margin-bottom:16px}
+.groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.group h4{margin:0 0 8px;font-family:var(--font-mono);font-size:.74rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:0;padding:0}
+.chips li{font-size:.88rem;padding:5px 11px;border-radius:8px;background:var(--surface-2);border:1px solid transparent}
+.chips.tech li{font-family:var(--font-mono);font-size:.82rem;background:var(--accent-soft);color:var(--fg)}
+.side-stack{display:flex;flex-direction:column;gap:18px}
+.lang{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.lang .row{display:flex;justify-content:space-between;gap:8px}
+.lang .row span{color:var(--muted);font-size:.92rem}
+.lang .bar{height:7px;border-radius:99px;background:var(--surface-2);margin-top:6px;overflow:hidden}
+.lang .bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+.plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.plain li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px}
+.plain svg{width:20px;height:20px;color:var(--accent);margin-top:2px}
+
+/* ---------- Contacto ---------- */
+.contact-band{background:var(--ink);color:var(--ink-fg);position:relative;overflow:hidden}
+.contact-band::before{content:"";position:absolute;width:640px;height:640px;right:-200px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(76,192,221,.22),transparent 65%)}
+.contact-band .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.contact-band .eyebrow{color:var(--accent-2)}
+.contact-band h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.03em;line-height:1.02;margin-top:10px}
+.contact-band .sub{color:var(--ink-muted);margin-top:14px;max-width:48ch;font-size:1.05rem}
+.clist{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.clist li{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:10px 12px}
+.clist .ci{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;background:rgba(76,192,221,.12);color:var(--accent-2)}
+.clist .ci svg{width:20px;height:20px}
+.clist small{display:block;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+.clist .val{font-weight:600;overflow-wrap:anywhere;color:var(--ink-fg);text-decoration:none}
+.copy{font:inherit;font-family:var(--font-mono);font-size:.76rem;color:var(--ink-fg);background:transparent;border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:5px 10px;cursor:pointer}
+.copy:hover{background:rgba(255,255,255,.08)}
+.qr-card{justify-self:center;width:min(100%,300px);background:#ffffff;color:#152031;border-radius:24px;padding:20px 20px 18px;text-align:center;box-shadow:0 40px 80px -30px rgba(0,0,0,.8);transform:rotate(2deg);transition:transform .3s ease}
+.qr-card:hover{transform:rotate(0)}
+.qr-card img{display:block;width:100%;max-width:100%;aspect-ratio:1;height:auto}
+.qr-card strong{display:block;font-family:var(--font-display);font-size:1rem;margin-top:8px}
+.qr-card span{display:block;font-size:.84rem;color:#5b677b}
+
+/* ---------- Proyecto destacado ---------- */
+.project{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,48px);background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,40px);align-items:center}
+.proj-text{display:flex;flex-direction:column;gap:14px;min-width:0}
+.proj-tags{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.live-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#d93b3b;padding:4px 10px;border-radius:6px}
+.live-tag i{width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.2s ease-in-out infinite}
+.project h3{font-size:clamp(1.35rem,2.6vw,1.75rem);font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.project p{color:var(--muted);font-size:1.02rem}
+.proj-list{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.proj-visual{background:var(--ink);border-radius:18px;padding:22px;color:var(--ink-fg);display:flex;flex-direction:column;gap:18px;min-width:0;position:relative;overflow:hidden}
+.proj-visual::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:18px 18px}
+.flow{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 34px minmax(0,1.1fr) 34px minmax(0,1fr);align-items:center}
+.fnode{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 10px;text-align:center;min-width:0}
+.fnode.main{background:rgba(76,192,221,.12);border-color:rgba(76,192,221,.55);box-shadow:0 0 30px -8px rgba(76,192,221,.6)}
+.fnode small{display:block;font-family:var(--font-mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted)}
+.fnode strong{display:block;font-family:var(--font-display);font-size:.92rem;margin-top:2px;overflow-wrap:anywhere}
+.fnode span{display:block;font-size:.74rem;color:var(--ink-muted);margin-top:2px}
+.fnode .dots{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;margin-top:6px}
+.fnode .dots b{width:7px;height:7px;border-radius:50%;background:var(--accent-2);animation:pulse 1.6s ease-in-out infinite}
+.fnode .dots b:nth-child(2n){animation-delay:-.4s}.fnode .dots b:nth-child(3n){animation-delay:-.8s}
+.farrow{display:flex;justify-content:center;gap:4px}
+.farrow i{width:5px;height:5px;border-radius:50%;background:var(--accent-2);animation:flow 1.2s linear infinite;opacity:.2}
+.farrow i:nth-child(2){animation-delay:.2s}.farrow i:nth-child(3){animation-delay:.4s}
+@keyframes flow{0%,100%{opacity:.2}40%{opacity:1}}
+.peak{position:relative;display:flex;align-items:center;gap:16px;border-top:1px dashed rgba(255,255,255,.15);padding-top:16px}
+.peak strong{font-family:var(--font-display);font-size:clamp(2.6rem,6vw,3.6rem);font-weight:800;line-height:1;letter-spacing:-.04em;background:linear-gradient(90deg,#fff,var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.peak span{color:var(--ink-muted);font-size:.92rem;line-height:1.35}
+@media (max-width:960px){
+  .project{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){
+  .flow{grid-template-columns:minmax(0,1fr);gap:6px}
+  .farrow{transform:rotate(90deg);height:20px;align-items:center}
+}
+
+/* ---------- Cinta de tecnologías ---------- */
+.ticker{background:var(--accent);color:#04141b;overflow:hidden;padding-block:14px;border-block:1px solid rgba(0,0,0,.08)}
+.ticker-track{display:flex;width:max-content;animation:ticker 38s linear infinite}
+.ticker ul{display:flex;list-style:none;margin:0;padding:0}
+.ticker li{font-family:var(--font-display);font-weight:700;font-size:1.05rem;white-space:nowrap;padding:0 22px;display:flex;align-items:center;gap:22px}
+.ticker li::after{content:"✦";font-size:.8rem;opacity:.55}
+@keyframes ticker{to{transform:translateX(-50%)}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ticker{color:#04141b}}
+
+/* ---------- Trayectoria ---------- */
+.road{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;position:relative;counter-reset:hito}
+.road::before{content:"";position:absolute;left:0;right:0;top:15px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--accent) 0%,var(--accent) 84%,transparent 84%,transparent 100%),repeating-linear-gradient(90deg,var(--muted) 0 6px,transparent 6px 12px)}
+.road li{position:relative;padding:44px 10px 0 0;min-width:0}
+.road li::before{content:"";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--bg);border:4px solid var(--accent)}
+.road li.goal::before{border-style:dashed;border-color:var(--muted)}
+.road li.hot::before{background:var(--accent);box-shadow:0 0 0 6px var(--accent-soft)}
+.road .d{font-family:var(--font-mono);font-size:.76rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.road h3{font-size:.98rem;font-weight:700;line-height:1.25;margin-top:4px}
+.road p{color:var(--muted);font-size:.86rem;margin-top:4px;line-height:1.4}
+.road li.goal .d{color:var(--muted)}
+
+/* ---------- Módulos ASIR ---------- */
+.mods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.mod-col{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 24px;min-width:0}
+.mod-col header{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
+.mod-col h3{font-size:1.08rem;font-weight:700}
+.mod-col ul{list-style:none;margin:0;padding:0}
+.mod-col li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.mod-col li:first-child{border-top:0}
+.mod-col li span{font-family:var(--font-mono);font-size:.72rem;color:var(--accent);background:var(--accent-soft);border-radius:6px;text-align:center;padding:2px 0}
+
+/* ---------- Qué busco ---------- */
+.seek{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.seek article{border-radius:18px;padding:24px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;min-width:0}
+.seek article.top{background:var(--ink);color:var(--ink-fg);border-color:transparent}
+.seek article.top p{color:var(--ink-muted)}
+.seek .tag{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.seek article.top .tag{color:var(--accent-2)}
+.seek h3{font-size:1.15rem;font-weight:700}
+.seek p{color:var(--muted)}
+
+@media (max-width:960px){
+  .road{grid-template-columns:minmax(0,1fr);gap:22px}
+  .road::before{left:8px;right:auto;top:8px;bottom:8px;width:3px;height:auto;background:linear-gradient(180deg,var(--accent) 0%,var(--accent) 86%,var(--muted) 86%)}
+  .road li{padding:0 0 0 40px}
+  .road li::before{top:2px}
+  .mods,.seek{grid-template-columns:minmax(0,1fr)}
+}
+
+footer{background:var(--ink);color:var(--ink-muted);border-top:1px solid rgba(255,255,255,.07);font-size:.86rem}
+footer .wrap{padding-block:22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+footer code{font-family:var(--font-mono);color:#5be3a0}
+
+.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:10px;font-size:.92rem;z-index:50;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:960px){
+  .why,.certs,.edu{grid-template-columns:minmax(0,1fr)}
+  .profile,.skills,.contact-band .wrap{grid-template-columns:minmax(0,1fr)}
+  .nav ul{display:none}
+  .nav-actions{margin-left:auto}
+}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr)}
+  .portrait{--size:min(240px,56vw)}
+  .stats ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats li{border-left:0;padding-left:0;border-top:1px solid var(--line)}
+  .stats li:nth-child(-n+2){border-top:0}
+  .stats li:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}
+}
+@media (max-width:1120px){
+  .nav ul{display:none}
+  .nav-actions{margin-left:auto}
+}
+@media (max-width:420px){
+  .brand .bname{display:none}
+}
+@media (max-width:560px){
+  .orbit-in{display:none}
+  .portrait{--pad:56px}
+  .sat b{font-size:.68rem;padding:4px 8px}
+}
+@media (max-width:560px){
+  .hero .actions .btn{flex:1 1 calc(50% - 6px)}
+  .hero .actions .btn-glow{flex-basis:100%}
+  .f1{left:-14px;top:30px}
+  .f2{right:-10px}
+  .groups{grid-template-columns:minmax(0,1fr)}
+  .job{grid-template-columns:minmax(0,1fr)}
+  .job .node{display:none}
+  .timeline::before{display:none}
+  .job-body{padding:20px}
+  .clist li{grid-template-columns:40px minmax(0,1fr)}
+  .clist .copy{grid-column:2;justify-self:start}
+  .clist .ci{width:40px;height:40px}
+  .qr-card{transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-5H7l-2 5z"/><path d="M5 12h14"/><circle cx="8" cy="17" r="1.6"/><circle cx="16" cy="17" r="1.6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="2.5"/><circle cx="18" cy="5" r="2.5"/><path d="M8.5 19H17a3.5 3.5 0 0 0 0-7H7a3.5 3.5 0 0 1 0-7h8.5"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="5" rx="1"/><rect x="2" y="17" width="6" height="5" rx="1"/><rect x="16" y="17" width="6" height="5" rx="1"/><path d="M12 7v5M5 17v-2.5h14V17"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-bike" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="10" height="9" rx="1.5"/><path d="M13 11h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.3-9.3M17 6l3 3M15 8l2 2"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></symbol>
+  <symbol id="i-qr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+</svg>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="wrap">
+    <a class="brand" href="#inicio"><span class="mark">MP</span><span class="bname">Miguel Pereira</span></a>
+    <ul>
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#certificaciones">Certificaciones</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#competencias">Competencias</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn btn-line btn-sm icon-btn" type="button" id="nav-qr" data-open-qr aria-label="Abrir mi código QR"><svg aria-hidden="true"><use href="#i-qr"/></svg><span>QR</span></button>
+      <a class="btn btn-glow btn-sm" href="cv-miguel-pereira.pdf" target="_blank" rel="noopener" id="nav-cv" data-dl="cv-miguel-pereira.pdf" data-name="CV-Miguel-Pereira-Trinidad.pdf" download="CV-Miguel-Pereira-Trinidad.pdf"><svg aria-hidden="true"><use href="#i-down"/></svg><span>Descargar CV</span></a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <p class="term-line"><span><b>miguel@asir</b>:~$</span><span>./buscar-empleo --sector=IT</span><span class="cursor" aria-hidden="true"></span></p>
+      <h1>Miguel<span class="l2">Pereira Trinidad</span></h1>
+      <p class="role">Técnico en formación de <span class="rot" id="rot">sistemas</span></p>
+      <p class="intro">Estudiante de 2.º de ASIR en U-tad con tres certificaciones oficiales de Cisco y Pearson. Busco mi primera oportunidad en sistemas, redes o soporte IT.</p>
+      <div class="actions">
+        <a class="btn btn-glow" href="cv-miguel-pereira.pdf" target="_blank" rel="noopener" id="hero-cv" data-dl="cv-miguel-pereira.pdf" data-name="CV-Miguel-Pereira-Trinidad.pdf" download="CV-Miguel-Pereira-Trinidad.pdf"><svg aria-hidden="true"><use href="#i-down"/></svg>Descargar CV (PDF)</a>
+        <button class="btn btn-line" type="button" id="hero-qr" data-open-qr><svg aria-hidden="true"><use href="#i-qr"/></svg>Mi código QR</button>
+        <a class="btn btn-line" href="#contacto"><svg aria-hidden="true"><use href="#i-mail"/></svg>Contactar</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/miguel-pereira-trinidad/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
+      </div>
+    </div>
+
+    <figure class="portrait">
+      <div class="orbit" aria-hidden="true">
+        <span class="sat s1"><b>CCST</b></span>
+        <span class="sat s2"><b class="w">Redes</b></span>
+        <span class="sat s3"><b class="y">Linux</b></span>
+        <span class="sat s4"><b>Windows</b></span>
+        <span class="sat s5"><b class="w">SQL</b></span>
+        <span class="sat s6"><b class="y">VMs</b></span>
+        <span class="sat s7"><b>Soporte IT</b></span>
+        <span class="sat s8"><b class="w">Seguridad</b></span>
+      </div>
+      <div class="orbit orbit-in" aria-hidden="true">
+        <span class="sat s1"><b class="ghost">TCP/IP</b></span>
+        <span class="sat s4"><b class="ghost">Cisco</b></span>
+        <span class="sat s6"><b class="ghost">Hardware</b></span>
+        <span class="sat s8"><b class="ghost">Raspberry Pi</b></span>
+        <span class="sat s3"><b class="ghost">Icecast</b></span>
+      </div>
+      <div class="ring">
+        <img src="foto.png" alt="Foto de Miguel Pereira Trinidad" width="223" height="315">
+      </div>
+      <figcaption class="avail"><i aria-hidden="true"></i>Disponible ahora</figcaption>
+    </figure>
+  </div>
+</header>
+
+<section class="stats" aria-label="En cifras">
+  <ul class="wrap">
+    <li><strong data-count="3">3</strong><span>certificaciones oficiales verificables</span></li>
+    <li><strong>2.º<em>/2</em></strong><span>curso de ASIR en U-tad (fin en 2027)</span></li>
+    <li><strong data-count="2">2</strong><span>empresas donde he trabajado</span></li>
+    <li><strong>50<em>+</em></strong><span>conexiones a la vez en mi servidor de streaming</span></li>
+  </ul>
+</section>
+
+<div class="ticker" aria-label="Tecnologías y competencias">
+  <div class="ticker-track">
+    <ul><li>Redes TCP/IP</li><li>Cisco</li><li>Linux</li><li>Windows</li><li>Virtualización</li><li>SQL</li><li>Bases de datos</li><li>Soporte IT</li><li>Hardware</li><li>Ciberseguridad</li><li>Servicios de red</li><li>Atención al cliente</li><li>Trabajo en equipo</li></ul>
+    <ul aria-hidden="true"><li>Redes TCP/IP</li><li>Cisco</li><li>Linux</li><li>Windows</li><li>Virtualización</li><li>SQL</li><li>Bases de datos</li><li>Soporte IT</li><li>Hardware</li><li>Ciberseguridad</li><li>Servicios de red</li><li>Atención al cliente</li><li>Trabajo en equipo</li></ul>
+  </div>
+</div>
+
+<section class="sec" aria-labelledby="t-why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Por qué yo</span>
+      <h2 class="h2" id="t-why">Tres motivos para llamarme</h2>
+    </div>
+    <div class="why">
+      <article>
+        <div class="ico"><svg aria-hidden="true"><use href="#i-net"/></svg></div>
+        <h3>Base técnica certificada</h3>
+        <p>Redes, soporte y bases de datos acreditados por Cisco y Pearson, no solo por el título. Puedes comprobar cada credencial en Credly.</p>
+        <span class="proof">→ CCST Networking · CCST IT Support · IT Specialist</span>
+      </article>
+      <article>
+        <div class="ico"><svg aria-hidden="true"><use href="#i-bolt"/></svg></div>
+        <h3>Ya sé lo que es trabajar</h3>
+        <p>Compagino los estudios con el trabajo. En el reparto y en el control de accesos he aprendido a cumplir horarios, atender a la gente y resolver imprevistos sobre la marcha.</p>
+        <span class="proof">→ Bon Appétit · Limgesma (2 temporadas)</span>
+      </article>
+      <article>
+        <div class="ico"><svg aria-hidden="true"><use href="#i-shield"/></svg></div>
+        <h3>De confianza</h3>
+        <p>Limgesma volvió a contratarme para una segunda temporada. Soy puntual, responsable y me adapto a turnos y horarios flexibles.</p>
+        <span class="proof">→ Disponibilidad inmediata y flexible</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="perfil" aria-labelledby="t-perfil" style="padding-top:0">
+  <div class="wrap profile">
+    <div class="text">
+      <span class="eyebrow">Perfil</span>
+      <h2 class="h2" id="t-perfil" style="margin-bottom:22px">Sobre mí</h2>
+      <p>Estudio el <strong>Grado Superior en Administración de Sistemas Informáticos en Red</strong> en U-tad. Lo que más me engancha son las redes, Linux y la ciberseguridad: entender cómo se conectan las cosas y cómo mantenerlas funcionando y protegidas.</p>
+      <p>Por mi cuenta he sacado las certificaciones <strong>Cisco CCST Networking</strong>, <strong>Cisco CCST IT Support</strong> y <strong>Pearson IT Specialist – Databases</strong>. Al mismo tiempo trabajo, así que llego acostumbrado a la responsabilidad, al trato con clientes y a organizarme bien.</p>
+      <p class="quote">Quiero entrar en un equipo de sistemas, redes o soporte donde aprender de gente con experiencia y aportar desde el primer día.</p>
+    </div>
+    <div class="code" role="img" aria-label="Resumen del perfil en formato de archivo de configuración">
+      <div class="code-bar"><i></i><i></i><i></i><span>/etc/miguel/perfil.yaml</span></div>
+<pre><span class="c"># Perfil profesional</span>
+<span class="k">nombre</span>: <span class="s">"Miguel Pereira Trinidad"</span>
+<span class="k">rol</span>: <span class="s">"Técnico de sistemas y redes"</span>
+<span class="k">ubicacion</span>: <span class="s">"Guadarrama, Madrid"</span>
+<span class="k">estado</span>: <span class="s">disponible</span>
+
+<span class="k">formacion</span>:
+  - <span class="s">ASIR @ U-tad</span>       <span class="c"># 2025-2027</span>
+
+<span class="k">certificaciones</span>:
+  - <span class="s">Cisco CCST Networking</span>
+  - <span class="s">Cisco CCST IT Support</span>
+  - <span class="s">Pearson IT Specialist DB</span>
+
+<span class="k">stack</span>: [<span class="s">redes</span>, <span class="s">linux</span>, <span class="s">windows</span>, <span class="s">virtualizacion</span>, <span class="s">sql</span>]
+<span class="k">idiomas</span>: { <span class="k">es</span>: <span class="s">nativo</span>, <span class="k">en</span>: <span class="s">intermedio</span> }
+<span class="k">carnet</span>: <span class="s">B</span>            <span class="c"># + coche propio</span>
+<span class="k">uptime</span>: <span class="n">100%</span>         <span class="c"># puntual siempre</span></pre>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="experiencia" aria-labelledby="t-exp" style="background:var(--surface-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Experiencia</span>
+      <h2 class="h2" id="t-exp">Dónde he trabajado</h2>
+      <p>Trabajos compatibles con los estudios en los que he ganado responsabilidad, trato con el público y capacidad de organización.</p>
+    </div>
+    <ol class="timeline">
+      <li class="job now">
+        <div class="node"><svg aria-hidden="true"><use href="#i-bike"/></svg></div>
+        <div class="job-body">
+          <div class="job-head">
+            <h3>Repartidor</h3>
+            <span class="pill live">Trabajo actual</span>
+          </div>
+          <p class="where"><strong>Bon Appétit</strong> · Collado Mediano (Madrid)</p>
+          <ul>
+            <li>Planificación de rutas para cumplir los tiempos de entrega en horas punta.</li>
+            <li>Atención al cliente en la entrega y resolución de incidencias con los pedidos.</li>
+          </ul>
+          <div class="gives"><b>Aporta</b><span>Gestión del tiempo</span><span>Atención al cliente</span><span>Autonomía</span></div>
+        </div>
+      </li>
+      <li class="job">
+        <div class="node"><svg aria-hidden="true"><use href="#i-key"/></svg></div>
+        <div class="job-body">
+          <div class="job-head">
+            <h3>Portero y controlador de accesos</h3>
+            <div class="periods"><span class="pill">jun – sep 2025</span><span class="pill">jun – sep 2026</span></div>
+          </div>
+          <p class="where"><strong>Limgesma</strong> · Guadarrama (Madrid) · Jornada parcial · 2 temporadas de verano</p>
+          <ul>
+            <li>Control de accesos y revisión de autorizaciones de personal y visitantes.</li>
+            <li>Vigilancia de las instalaciones y atención al público.</li>
+            <li>Mantenimiento de zonas comunes.</li>
+            <li>La empresa volvió a contar conmigo en 2026 tras la primera temporada.</li>
+          </ul>
+          <div class="gives"><b>Aporta</b><span>Control de accesos</span><span>Responsabilidad</span><span>Trabajo en equipo</span></div>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="proyectos" aria-labelledby="t-proj">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Proyectos</span>
+      <h2 class="h2" id="t-proj">Lo que he construido</h2>
+    </div>
+    <article class="project">
+      <div class="proj-text">
+        <div class="proj-tags"><span class="live-tag"><i aria-hidden="true"></i>En directo</span><span class="pill">Proyecto propio · Prácticas</span></div>
+        <h3>Servidor de streaming en directo sobre Raspberry Pi</h3>
+        <p>Monté desde cero un servidor Linux en una Raspberry Pi para emitir en directo por Internet. La señal se produce en OBS Studio y se envía al servidor Icecast, que la reparte a todos los oyentes conectados.</p>
+        <ul class="proj-list">
+          <li>Instalación y configuración del sistema Linux en la Raspberry Pi.</li>
+          <li>Puesta en marcha de Icecast como servidor de emisión.</li>
+          <li>Configuración de OBS Studio para enviar la emisión al servidor.</li>
+          <li>Pruebas reales con público: aguantó picos de <strong>más de 50 conexiones simultáneas</strong>.</li>
+        </ul>
+        <ul class="chips tech"><li>Linux</li><li>Raspberry Pi</li><li>Icecast</li><li>OBS Studio</li><li>Streaming</li><li>Redes</li></ul>
+      </div>
+      <div class="proj-visual" aria-label="Esquema: OBS Studio envía la emisión a Icecast en la Raspberry Pi, que la sirve a más de 50 oyentes a la vez">
+        <div class="flow">
+          <div class="fnode"><small>Emisión</small><strong>OBS Studio</strong><span>Produce la señal</span></div>
+          <div class="farrow" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="fnode main"><small>Servidor</small><strong>Raspberry Pi</strong><span>Linux + Icecast</span></div>
+          <div class="farrow" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="fnode"><small>Oyentes</small><strong>Internet</strong><span class="dots" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></span></div>
+        </div>
+        <div class="peak">
+          <strong>50+</strong>
+          <span>conexiones simultáneas<br>en pico de audiencia</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec certs-band" id="certificaciones" aria-labelledby="t-cert">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Credenciales</span>
+      <h2 class="h2" id="t-cert">Certificaciones oficiales</h2>
+      <p>Emitidas en mayo de 2026 y válidas hasta 2031. Cada una enlaza a su insignia verificada en Credly.</p>
+    </div>
+    <div class="certs">
+      <article class="cert">
+        <div class="badge">CCST</div>
+        <span class="issuer">Cisco</span>
+        <h3>CCST Networking</h3>
+        <p>Fundamentos de redes: direccionamiento IP, dispositivos, cableado, conectividad y resolución de problemas de red.</p>
+        <div class="meta"><span>may 2026</span><span>válida hasta 2031</span></div>
+        <a href="https://www.credly.com/badges/5a85c4f7-ed99-4551-8ab1-125d43a5d687" target="_blank" rel="noopener">Verificar credencial <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="cert">
+        <div class="badge">CCST</div>
+        <span class="issuer">Cisco</span>
+        <h3>CCST IT Support</h3>
+        <p>Soporte técnico: hardware, sistemas operativos, diagnóstico de incidencias y atención al usuario.</p>
+        <div class="meta"><span>may 2026</span><span>válida hasta 2031</span></div>
+        <a href="https://www.credly.com/badges/78b08ab8-3f79-474e-ba3f-89097f1de870" target="_blank" rel="noopener">Verificar credencial <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="cert">
+        <div class="badge pearson">ITS</div>
+        <span class="issuer">Pearson · Certiport</span>
+        <h3>IT Specialist – Databases</h3>
+        <p>Diseño de bases de datos relacionales y consultas SQL para crear, leer y modificar datos.</p>
+        <div class="meta"><span>may 2026</span><span>válida hasta 2031</span></div>
+        <a href="https://www.credly.com/badges/56648e79-2cf7-4f6f-82b7-652bb92c2017" target="_blank" rel="noopener">Verificar credencial <svg width="16" height="16" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="formacion" aria-labelledby="t-edu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Formación</span>
+      <h2 class="h2" id="t-edu">Estudios</h2>
+    </div>
+    <div class="edu">
+      <article class="main">
+        <span class="yr">2025 – 2027 · en curso</span>
+        <h3>Técnico Superior en Administración de Sistemas Informáticos en Red</h3>
+        <p>U-tad · Las Rozas de Madrid</p>
+        <div class="progress" aria-label="Progreso del ciclo: segundo de dos cursos">
+          <div class="bar"><i></i></div>
+          <small><span>1.º ✓</span><span>2.º en curso</span></small>
+        </div>
+      </article>
+      <article>
+        <span class="yr">2023 – 2025</span>
+        <h3>Bachillerato de Ciencias Sociales</h3>
+        <p>Gredos San Diego · Guadarrama (Madrid)</p>
+      </article>
+      <article>
+        <span class="yr">455 horas</span>
+        <h3>Técnico Deportivo en Fútbol</h3>
+        <p>Asociación Formativa de Entrenadores Nacionales (AFEN) · Majadahonda (Madrid). Liderazgo de grupos y trabajo en equipo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="competencias" aria-labelledby="t-skills" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Competencias</span>
+      <h2 class="h2" id="t-skills">Lo que sé hacer</h2>
+    </div>
+    <div class="skills">
+      <div class="panel">
+        <h3>Técnicas</h3>
+        <div class="groups">
+          <div class="group"><h4>Redes</h4><ul class="chips tech"><li>TCP/IP</li><li>Direccionamiento IP</li><li>Switching</li><li>Cableado</li></ul></div>
+          <div class="group"><h4>Sistemas</h4><ul class="chips tech"><li>Linux</li><li>Windows</li><li>Virtualización</li></ul></div>
+          <div class="group"><h4>Datos</h4><ul class="chips tech"><li>SQL</li><li>Bases de datos relacionales</li></ul></div>
+          <div class="group"><h4>Soporte y seguridad</h4><ul class="chips tech"><li>Soporte IT</li><li>Hardware</li><li>Ciberseguridad</li></ul></div>
+        </div>
+        <h3 style="margin-top:26px">Personales</h3>
+        <ul class="chips">
+          <li>Responsabilidad</li><li>Puntualidad</li><li>Trabajo en equipo</li><li>Adaptabilidad</li><li>Compromiso</li><li>Ganas de aprender</li><li>Trato con el cliente</li><li>Respeto</li>
+        </ul>
+      </div>
+      <div class="side-stack">
+        <div class="panel">
+          <h3>Idiomas</h3>
+          <ul class="lang">
+            <li><div class="row"><strong>Español</strong><span>Nativo</span></div><div class="bar"><i style="width:100%"></i></div></li>
+            <li><div class="row"><strong>Inglés</strong><span>Intermedio</span></div><div class="bar"><i style="width:58%"></i></div></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Otros datos</h3>
+          <ul class="plain">
+            <li><svg aria-hidden="true"><use href="#i-car"/></svg><span>Carnet de conducir B y vehículo propio</span></li>
+            <li><svg aria-hidden="true"><use href="#i-clock"/></svg><span>Disponibilidad horaria flexible</span></li>
+            <li><svg aria-hidden="true"><use href="#i-route"/></svg><span>Movilidad por toda la Comunidad de Madrid</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="busco" aria-labelledby="t-seek" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Qué busco</span>
+      <h2 class="h2" id="t-seek">Cómo puedo encajar en tu equipo</h2>
+    </div>
+    <div class="seek">
+      <article class="top">
+        <span class="tag">Prioridad</span>
+        <h3>Prácticas del ciclo ASIR</h3>
+        <p>Formación en empresa en sistemas, redes, soporte o ciberseguridad, con ganas de quedarme si encajo.</p>
+      </article>
+      <article>
+        <span class="tag">Compatible</span>
+        <h3>Media jornada o fines de semana</h3>
+        <p>Un puesto de soporte o técnico que pueda compaginar con las clases en U-tad.</p>
+      </article>
+      <article>
+        <span class="tag">A partir de 2027</span>
+        <h3>Puesto a jornada completa</h3>
+        <p>Técnico de sistemas, de redes o de soporte IT a jornada completa al terminar el ciclo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact-band" id="contacto" aria-labelledby="t-contact">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Contacto</span>
+      <h2 id="t-contact">¿Tienes un puesto para mí?</h2>
+      <p class="sub">Estoy disponible para prácticas, contratos a media jornada o a jornada completa en sistemas, redes y soporte. Respondo rápido.</p>
+      <ul class="clist">
+        <li>
+          <span class="ci"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <div><small>Email</small><span class="val">pereiratrinidadm@gmail.com</span></div>
+          <button class="copy" type="button" id="copy-email" data-copy="pereiratrinidadm@gmail.com">Copiar</button>
+        </li>
+        <li>
+          <span class="ci"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <div><small>Teléfono</small><a class="val" href="tel:+34640618792">640 618 792</a></div>
+          <button class="copy" type="button" id="copy-phone" data-copy="640618792">Copiar</button>
+        </li>
+        <li>
+          <span class="ci"><svg aria-hidden="true"><use href="#i-in"/></svg></span>
+          <div><small>LinkedIn</small><a class="val" href="https://www.linkedin.com/in/miguel-pereira-trinidad/" target="_blank" rel="noopener">in/miguel-pereira-trinidad</a></div>
+          <span></span>
+        </li>
+        <li>
+          <span class="ci"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
+          <div><small>Ubicación</small><span class="val">Guadarrama (Madrid)</span></div>
+          <span></span>
+        </li>
+      </ul>
+    </div>
+    <div class="qr-card">
+      <img src="qr.svg" alt="Código QR que abre este CV" width="300" height="300">
+      <strong>Comparte este CV</strong>
+      <span>Escanéalo para abrirlo en el móvil</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Miguel Pereira Trinidad · CV actualizado en noviembre de 2026</span>
+    <code>$ exit 0</code>
+  </div>
+</footer>
+
+<div class="modal" id="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-title" hidden>
+  <div class="modal-card">
+    <button class="close" type="button" id="qr-close" aria-label="Cerrar"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    <img src="qr.svg" alt="Código QR que abre este CV" width="340" height="340">
+    <h3 id="qr-title">Escanea mi CV</h3>
+    <p>Apunta con la cámara del móvil para abrir esta página.</p>
+    <div class="row">
+      <a class="btn modal-dark" href="qr-cv-miguel.png" target="_blank" rel="noopener" id="qr-dl" data-dl="qr-cv-miguel.png" data-name="QR-CV-Miguel-Pereira.png" download="QR-CV-Miguel-Pereira.png"><svg aria-hidden="true"><use href="#i-down"/></svg>Descargar QR</a>
+      <a class="btn modal-light" href="cv-miguel-pereira.pdf" target="_blank" rel="noopener" id="qr-cv" data-dl="cv-miguel-pereira.pdf" data-name="CV-Miguel-Pereira-Trinidad.pdf" download="CV-Miguel-Pereira-Trinidad.pdf">CV en PDF</a>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Copiar email / teléfono */
+  var toast=document.getElementById('toast'),tt;
+  function show(m){toast.textContent=m;toast.hidden=false;clearTimeout(tt);tt=setTimeout(function(){toast.hidden=true},2200);}
+  function fallback(text){
+    var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='absolute';ta.style.left='-9999px';
+    document.body.appendChild(ta);ta.select();var ok=false;try{ok=document.execCommand('copy');}catch(e){}
+    document.body.removeChild(ta);show(ok?'Copiado: '+text:text);
+  }
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy');
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){show('Copiado: '+t)},function(){fallback(t)});}
+      else fallback(t);
+    });
+  });
+
+  /* Ventana del QR */
+  var modal=document.getElementById('qr-modal'),lastFocus=null;
+  function openQR(){lastFocus=document.activeElement;modal.hidden=false;document.getElementById('qr-close').focus();}
+  function closeQR(){modal.hidden=true;if(lastFocus)lastFocus.focus();}
+  document.querySelectorAll('[data-open-qr]').forEach(function(b){b.addEventListener('click',openQR);});
+  document.getElementById('qr-close').addEventListener('click',closeQR);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeQR();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeQR();});
+  if(location.hash==='#qr')openQR();
+
+  /* Descargas: se usa la descarga del visor si está disponible; si no, el enlace abre el archivo */
+  var dlPromise=(window.claude&&window.claude.use)?window.claude.use('downloads').catch(function(){return null}):Promise.resolve(null);
+  var cache={};
+  function getFile(src){if(!cache[src])cache[src]=fetch(src).then(function(r){if(!r.ok)throw new Error('http');return r.blob();});return cache[src];}
+  document.querySelectorAll('[data-dl]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var src=a.getAttribute('data-dl'),name=a.getAttribute('data-name');
+      if(!(window.claude&&window.claude.use))return; /* web normal: el enlace descarga por sí solo */
+      e.preventDefault();
+      dlPromise.then(function(dl){
+        if(!dl){window.open(a.href,'_blank','noopener')||(location.href=a.href);return;}
+        return getFile(src).then(function(blob){return dl.save({filename:name,data:blob});}).then(function(r){
+          if(r&&r.status==='saved')show('Descargado: '+name);
+        }).catch(function(err){
+          var c=err&&err.code;
+          if(c==='declined')return;
+          if(c==='rate_limited'){show('Espera un momento y vuelve a intentarlo');return;}
+          show('No se pudo descargar aquí. Abriendo el archivo…');
+          window.open(a.href,'_blank','noopener');
+        });
+      });
+    });
+  });
+
+  /* Palabra que rota en el titular */
+  var words=['sistemas','redes','soporte IT','ciberseguridad','Linux'],wi=0,rot=document.getElementById('rot');
+  if(!reduce&&rot){
+    setInterval(function(){
+      wi=(wi+1)%words.length;var w=words[wi],i=0;rot.textContent='';
+      var ti=setInterval(function(){rot.textContent=w.slice(0,++i);if(i>=w.length)clearInterval(ti);},55);
+    },2600);
+  }
+
+  /* Contadores (el valor final ya está en el HTML) */
+  if(false){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting)return;io.unobserve(e.target);
+      var el=e.target,end=+el.getAttribute('data-count'),t0=null;
+      function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);}
+      requestAnimationFrame(step);
+    });},{threshold:.6});
+    document.querySelectorAll('[data-count]').forEach(function(el){io.observe(el)});
+  }
+
+  /* Topología de red animada en el hero */
+  var cv=document.getElementById('net');if(!cv||!cv.getContext)return;
+  var ctx=cv.getContext('2d'),W,H,dpr,nodes=[],mouse={x:-999,y:-999},packets=[];
+  function size(){
+    var r=cv.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);W=r.width;H=r.height;
+    cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    var count=Math.round(Math.min(70,Math.max(26,W*H/16000)));nodes=[];
+    for(var i=0;i<count;i++)nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.6+1,hub:Math.random()<.12});
+  }
+  function frame(){
+    ctx.clearRect(0,0,W,H);var D=140;
+    for(var i=0;i<nodes.length;i++){var a=nodes[i];
+      if(!reduce){a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;}
+      for(var j=i+1;j<nodes.length;j++){var b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<D){ctx.strokeStyle='rgba(76,192,221,'+(0.22*(1-d/D))+')';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+          if(!reduce&&Math.random()<.0009&&packets.length<14)packets.push({a:a,b:b,t:0});}
+      }
+    }
+    for(var k=packets.length-1;k>=0;k--){var p=packets[k];p.t+=.018;if(p.t>=1){packets.splice(k,1);continue;}
+      var px=p.a.x+(p.b.x-p.a.x)*p.t,py=p.a.y+(p.b.y-p.a.y)*p.t;ctx.fillStyle='rgba(140,230,255,.95)';ctx.beginPath();ctx.arc(px,py,2.2,0,6.283);ctx.fill();}
+    for(var n=0;n<nodes.length;n++){var o=nodes[n],md=Math.hypot(o.x-mouse.x,o.y-mouse.y),glow=md<120?1:0;
+      ctx.fillStyle=o.hub?'rgba(76,192,221,.95)':'rgba(200,225,240,'+(0.45+glow*.4)+')';
+      ctx.beginPath();ctx.arc(o.x,o.y,o.hub?o.r+1.6:o.r,0,6.283);ctx.fill();
+      if(o.hub){ctx.strokeStyle='rgba(76,192,221,.3)';ctx.beginPath();ctx.arc(o.x,o.y,o.r+6,0,6.283);ctx.stroke();}
+    }
+    if(!reduce)requestAnimationFrame(frame);
+  }
+  cv.parentElement.addEventListener('pointermove',function(e){var r=cv.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;});
+  window.addEventListener('resize',function(){size();if(reduce)frame();});
+  size();frame();
+})();
+</script>
+
+</body>
+</html>
